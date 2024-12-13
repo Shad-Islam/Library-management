@@ -5,6 +5,7 @@ def delete_book(all_books):
     for book in all_books:
         if book['title'] == search_book:
             all_books.remove(book)
+            print("Book deleted succesfully.\n")
             save_book.save_book(all_books)
             return all_books
     else:

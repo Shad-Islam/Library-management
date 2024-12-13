@@ -8,7 +8,16 @@ borrowers =[]
 def borrow_book(all_books,borrowers):
     
     name = input("Enter your name: ")
-    phone = int(input("Enter your phone number: "))
+    # phone = int(input("Enter your phone number: "))
+    while True:
+        try:
+            phone = input("Enter your phone number: ")
+            if not phone.isdigit() or len(phone) != 11:
+                raise ValueError("Phone number must be valid and 11 digits long")
+            phone=int(phone)
+            break
+        except ValueError as e:
+            print(f"Ivalid phone number: {e}")
     book_title = input("Enter the book title: ")
     days = int(input("Enter number of days to borrow (e.g., 7): "))
     
