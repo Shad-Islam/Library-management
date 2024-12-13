@@ -2,7 +2,7 @@ import datetime
 import save_book
 
 def update_book(all_books):
-    search_book = input("Enter the name of the book you want to update: ")
+    search_book = input("Enter the name of the book you want to update: \n")
     for book in all_books:
         if search_book == book['title']:
             title = input("Enter the book title: ")
@@ -20,5 +20,5 @@ def update_book(all_books):
             book['book_last_update']=book_last_update
             save_book.save_book(all_books)
             return all_books
-    print("Book not found")
+    print("Book not found\n")
 
