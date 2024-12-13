@@ -1,32 +1,8 @@
 [
     {
-        "name": "as",
-        "phone": 12,
-        "book_title": "w",
+        "name": "1",
+        "phone": 1817016980,
+        "book_title": "golpo",
         "return_date": "12 January 2025"
-    },
-    {
-        "name": "ep",
-        "phone": 0,
-        "book_title": "w",
-        "return_date": "20 December 2024"
-    },
-    {
-        "name": "t",
-        "phone": 3,
-        "book_title": "w",
-        "return_date": "18 December 2024"
-    },
-    {
-        "name": "tr",
-        "phone": 45,
-        "book_title": "w",
-        "return_date": "18 December 2024"
-    },
-    {
-        "name": "oo",
-        "phone": 0,
-        "book_title": "w",
-        "return_date": "13 March 2025"
     }
 ]

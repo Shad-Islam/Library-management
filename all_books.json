@@ -5,8 +5,18 @@
         "isbn": 39229,
         "year": 2002,
         "price": 200,
-        "quantity": 200,
+        "quantity": 199,
         "bookAddedAt": "13-12-24 19:51:32",
         "book_last_update": "13-12-2024 19:52:56"
+    },
+    {
+        "title": "Golpo 2",
+        "author": "shad",
+        "isbn": 45164,
+        "year": 2010,
+        "price": 30,
+        "quantity": 30,
+        "bookAddedAt": "13-12-24 21:27:32",
+        "book_last_update": "13-12-2024 21:29:28"
     }
 ]

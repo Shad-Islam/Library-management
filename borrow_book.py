@@ -1,12 +1,10 @@
 from datetime import datetime, timedelta
-import restore_borrower
 import save_book
 import save_borrowers
 
 borrowers =[]
 
 def borrow_book(all_books,borrowers):
-    
     name = input("Enter your name: ")
     # phone = int(input("Enter your phone number: "))
     while True:
@@ -19,12 +17,19 @@ def borrow_book(all_books,borrowers):
         except ValueError as e:
             print(f"Ivalid phone number: {e}")
     book_title = input("Enter the book title: ")
-    days = int(input("Enter number of days to borrow (e.g., 7): "))
     
+    while True:
+        try:
+            days =int(input("Enter number of days to borrow (e.g., 7): "))
+            if days <= 0:
+                raise ValueError("Invalid date")   
+            break
+        except ValueError as e:
+            print(f"Invalid number: {e}")
+
     # Calculate return date
     current_date = datetime.now()
     return_date = (current_date + timedelta(days=days)).strftime("%d %B %Y")
-    # print(f"Return date will be: {return_date}")
     
    
 
