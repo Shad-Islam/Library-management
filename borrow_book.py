@@ -1,25 +1,33 @@
+from datetime import datetime, timedelta
 import restore_borrower
 import save_book
 import save_borrowers
 
 borrowers =[]
 
-def borrow_book(all_books):
+def borrow_book(all_books,borrowers):
+    
     name = input("Enter your name: ")
-    phone= int(input("Enter your phone number: "))
-    return_date = input("Enter return date: ")
+    phone = int(input("Enter your phone number: "))
     book_title = input("Enter the book title: ")
-    restore_borrower.borrower_restore(borrowers)
+    days = int(input("Enter number of days to borrow (e.g., 7): "))
+    
+    # Calculate return date
+    current_date = datetime.now()
+    return_date = (current_date + timedelta(days=days)).strftime("%d %B %Y")
+    # print(f"Return date will be: {return_date}")
+    
+   
 
-    borrower ={
-       "name":name,
-        "phone":phone,
-        "book_title":book_title,
-        "return_date":return_date
+    borrower = {
+       "name": name,
+        "phone": phone,
+        "book_title": book_title,
+        "return_date": return_date
     }
 
     for book in all_books:
-        if book['title'] == book_title:
+        if book['title'].strip().lower() == book_title.strip().lower():
             if book["quantity"] > 0:
                 book["quantity"] = book["quantity"]-1
                 print("Book borrowed successfully\n")
